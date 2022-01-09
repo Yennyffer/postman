@@ -1,0 +1,155 @@
+{
+	"info": {
+		"_postman_id": "fd0dce2a-1129-4fa8-a4fb-5e3c6b307229",
+		"name": "Customer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8081/api/customers/61d88559d5569b07f4079a39",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n    \"firstname\" : \"Carlos\",\r\n    \"lastname\" : \"Perez Mancilla\",\r\n    \"email\" : \"joseperez@gmail.com\",\r\n    \"address\" : {\r\n        \"tipo\" : \"Avenida\",\r\n        \"nombre\" : \"El triunfo\",\r\n        \"numero\" : \"N°123\",\r\n        \"provincia\" : \"Chiclayo\",\r\n        \"distrito\" : \"Chiclayo\",\r\n        \"departamento\" : \"Lambayeque\"\r\n    },\r\n    \"telephone\" : \"947689895\",\r\n    \"dateBirth\" : \"10/02/1990\",\r\n    \"sex\" : \"M\",\r\n    \"isActive\" : true,\r\n    \"customerType\" : {\r\n        \"id\" : 1,\r\n        \"description\" : \"personal\"\r\n    },\r\n    \"identityDocument\" : {\r\n        \"number\" : \"70384565\",\r\n        \"typeDocumentIdentity\" : {\r\n            \"id\" : 1,\r\n            \"description\" : \"DNI\"\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/customers/61d88559d5569b07f4079a39",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"customers",
+						"61d88559d5569b07f4079a39"
+					]
+				},
+				"description": "Obtener datos de cliente por id."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/api/customers/61d9d854d5569b07f407c6e1",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/customers/61d9d854d5569b07f407c6e1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"customers",
+						"61d9d854d5569b07f407c6e1"
+					]
+				},
+				"description": "Eliminar"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/api/customers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/customers-all/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"customers-all",
+						""
+					]
+				},
+				"description": "findAll: Encontrar a todos los que tengan un tipo de cliente"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/api/customers/create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n    \"firstname\" : \"prueba\",\r\n    \"lastname\" : \"Psdf\",\r\n    \"email\" : \"joseperez@gmail.com\",\r\n    \"address\" : {\r\n        \"type\" : \"Avenida\",\r\n        \"name\" : \"El triunfo\",\r\n        \"number\" : \"N°123\",\r\n        \"province\" : \"Chiclayo\",\r\n        \"district\" : \"Chiclayo\",\r\n        \"department\" : \"Lambayeque\"\r\n    },\r\n    \"telephone\" : \"947689895\",\r\n    \"dateBirth\" : \"1990-02-10\",\r\n    \"gender\" : \"M\",\r\n    \"isActive\" : true,\r\n    \"customerType\" : {\r\n        \"id\" : \"1\",\r\n        \"description\" : \"personal\",\r\n        \"isActive\" : true\r\n    },\r\n    \"numberDocumentIdentity\" : \"70384565\",\r\n    \"typeDocumentIdentity\" : {\r\n            \"id\" : \"1\",\r\n            \"description\" : \"DNI\",\r\n            \"isActive\" : true\r\n        }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/customers/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"customers",
+						"create"
+					]
+				},
+				"description": "Creacion de usuario"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/api/customers/update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"id\": \"61d88559d5569b07f4079a39\",\r\n    \"firstname\": \"José\",\r\n    \"lastname\": \"Pérez Mancilla\",\r\n    \"companyName\": \"solti\",\r\n    \"email\": \"joseperez@gmail.com\",\r\n    \"address\": {\r\n        \"type\": \"Avenida\",\r\n        \"name\": \"El triunfo\",\r\n        \"number\": \"N°123\",\r\n        \"province\": \"Chiclayo\",\r\n        \"district\": \"Chiclayo\",\r\n        \"department\": \"Lambayeque\"\r\n    },\r\n    \"telephone\": \"947689895\",\r\n    \"dateBirth\": \"1990-10-02T05:00:00.000+00:00\",\r\n    \"gender\": \"M\",\r\n    \"numberDocumentIdentity\": \"70384565\",\r\n    \"typeDocumentIdentity\": {\r\n        \"id\": \"1\",\r\n        \"description\": \"DNI\",\r\n        \"active\": true\r\n    },\r\n    \"customerType\": {\r\n        \"id\": \"1\",\r\n        \"description\": \"personal\",\r\n        \"active\": true\r\n    },\r\n    \"active\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/customers/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"customers",
+						"update"
+					]
+				},
+				"description": "Actualizacion"
+			},
+			"response": []
+		}
+	]
+}
