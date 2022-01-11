@@ -1,0 +1,135 @@
+{
+	"info": {
+		"_postman_id": "7412dc36-d8df-4ca7-8f2a-3c3d56741006",
+		"name": "Credit",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8083/api/customer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8083/api/customer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"customer"
+					]
+				},
+				"description": "Lista todos los clientes registrados"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8083/api/credits-all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8083/api/credits-all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"credits-all"
+					]
+				},
+				"description": "Obtener todos los creditos registrados."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8083/api/credit/create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"cardNumber\" : \"00002222588854\",\r\n    \"cvv\" : \"102\",\r\n    \"month\" : 4,\r\n    \"year\" : 21,\r\n    \"creditLimit\" : 1200,\r\n    \"paymentDate\" : \"2021-10-16\",\r\n    \"isActive\" : true,\r\n    \"customer\" : {\r\n        \"id\" : \"61dc7dd7d5569b07f40808dd\",\r\n        \"firstname\" : \"Maria\",\r\n        \"lastname\" : \"Pérez Lopez\",\r\n        \"email\" : \"mariaperez@gmail.com\",\r\n        \"customerType\" : {\r\n            \"id\" : \"1\",\r\n            \"description\" : \"personal\"\r\n        },\r\n        \"numberDocumentIdentity\" : \"72103050\",\r\n        \"typeDocumentIdentity\" : {\r\n            \"id\" : \"1\",\r\n            \"description\" : \"DNI\"\r\n        }\r\n    },\r\n    \"creditType\" : {\r\n        \"id\" : \"001\",\r\n        \"description\" : \"Personal\",\r\n        \"maintenanceCommission\" : 0,\r\n        \"amountCredits\" : 1,\r\n        \"isActive\" : true\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/api/credit/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"credit",
+						"create"
+					]
+				},
+				"description": "Creacion de créditos"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8083/api/credit/update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"d94faec1-bb34-4e23-8aa9-a0647aab12fc\",\r\n    \"cardNumber\": \"00002222588854_modificado\",\r\n    \"cvv\": \"102\",\r\n    \"month\": 4,\r\n    \"year\": 21,\r\n    \"creditLimit\": 1200.0,\r\n    \"paymentDate\": \"2021-10-16T00:00:00.000+00:00\",\r\n    \"amountAvailable\": 0.0,\r\n    \"amountConsumed\": 0.0,\r\n    \"customer\": {\r\n        \"id\": \"61dc7dd7d5569b07f40808dd\",\r\n        \"firstname\": \"Maria\",\r\n        \"lastname\": \"Pérez Lopez\",\r\n        \"companyName\": null,\r\n        \"email\": \"mariaperez@gmail.com\",\r\n        \"customerType\": {\r\n            \"id\": \"1\",\r\n            \"description\": \"personal\"\r\n        },\r\n        \"typeDocumentIdentity\": {\r\n            \"id\": \"1\",\r\n            \"description\": \"DNI\"\r\n        },\r\n        \"numberDocumentIdentity\": \"72103050\"\r\n    },\r\n    \"creditType\": {\r\n        \"id\": \"001\",\r\n        \"description\": \"Personal\",\r\n        \"amountCredits\": 1,\r\n        \"active\": false\r\n    },\r\n    \"active\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/api/credit/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"credit",
+						"update"
+					]
+				},
+				"description": "Actualizacion de un crédito"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8083/api/credits/ed9b3ce7-8f94-468e-b312-75776166c643",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8083/api/credits/ed9b3ce7-8f94-468e-b312-75776166c643",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"credits",
+						"ed9b3ce7-8f94-468e-b312-75776166c643"
+					]
+				},
+				"description": "Eliminacion de un crédito"
+			},
+			"response": []
+		}
+	]
+}
