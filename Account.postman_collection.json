@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "49326c3b-9e5e-4890-b22a-6c5601155dff",
+		"name": "Account",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:9292/api/accounts-all Copy",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstname\" : \"Jose - not customerType\",\r\n    \"lastname\" : \"Perez Mancilla\",\r\n    \"email\" : \"joseperez@gmail.com\",\r\n    \"address\" : {\r\n        \"type\" : \"Avenida\",\r\n        \"name\" : \"El triunfo\",\r\n        \"number\" : \"N°123\",\r\n        \"province\" : \"Chiclayo\",\r\n        \"district\" : \"Chiclayo\",\r\n        \"department\" : \"Lambayeque\"\r\n    },\r\n    \"telephone\" : \"947689895\",\r\n    \"dateBirth\" : \"10/02/1990\",\r\n    \"sex\" : \"M\",\r\n    \"isActive\" : true,\r\n    \"documentIdentity\" : {\r\n        \"number\" : \"70384565\",\r\n        \"isActive\" : true,\r\n        \"typeDocumentIdentity\" : {\r\n            \"id\" : \"1\",\r\n            \"description\" : \"DNI\",\r\n            \"isActive\" : true\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/api/accounts/61dc7356d5569b07f408061c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"accounts",
+						"61dc7356d5569b07f408061c"
+					]
+				},
+				"description": "Obtener cuenta bancaria por id"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9292/api/accounts-all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9292/api/accounts-all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9292",
+					"path": [
+						"api",
+						"accounts-all"
+					]
+				},
+				"description": "Listar todos"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9292/api/accounts/ 61da1a6dd5569b07f407e0ba",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9292/api/accounts/ 61da1a6dd5569b07f407e0ba",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9292",
+					"path": [
+						"api",
+						"accounts",
+						" 61da1a6dd5569b07f407e0ba"
+					]
+				},
+				"description": "eliminar account"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8082/api/customer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/api/customer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"customer"
+					]
+				},
+				"description": "Listo todos los clientes registrados."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8082/api/account/update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : \"61dc738cd5569b07f4080629\",\r\n    \"accountNumber\" : \"000004\",\r\n    \"currency\" : \"Sóles\",\r\n    \"amountAvailable\" : 156.5,\r\n    \"iterator\" : 1,\r\n    \"isActive\" : true,\r\n    \"customer\" : {\r\n        \"id\" : \"61d88559d5569b07f4079a39\",\r\n        \"firstname\" : \"Jose\",\r\n        \"lastname\" : \"Perez Mancilla\",\r\n        \"email\" : \"joseperez@gmail.com\",\r\n        \"customerType\" : {\r\n            \"id\" : \"1\",\r\n            \"description\" : \"personal\"\r\n        },\r\n        \"numberDocumentIdentity\" : \"70384565\",\r\n        \"typeDocumentIdentity\" : {\r\n            \"id\" : \"1\",\r\n            \"description\" : \"DNI\"\r\n        }\r\n    },\r\n    \"accountType\" : {\r\n        \"id\" : \"001\",\r\n        \"description\" : \"Ahorro\",\r\n        \"maintenanceCommission\" : 0,\r\n        \"amountMonthlyMovements\" : 5,\r\n        \"isActive\" : true\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/api/account/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"account",
+						"update"
+					]
+				},
+				"description": "Actualizacion de una cuenta bancaria"
+			},
+			"response": []
+		}
+	]
+}
