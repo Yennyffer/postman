@@ -1,0 +1,157 @@
+{
+	"info": {
+		"_postman_id": "79eaaa09-6246-473e-b6d2-88c1a75ca72a",
+		"name": "Transaction",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8084/api/transactions-all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8084/api/transactions-all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"api",
+						"transactions-all"
+					]
+				},
+				"description": "Todas las transacciones registradas"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8084/api/transaction/update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": \"61ddc14a396d3db796c2f92a\",\r\n        \"amount\": 52.0,\r\n        \"date\": \"2022-10-10T05:00:00.000+00:00\",\r\n        \"transactionType\": {\r\n            \"id\": null,\r\n            \"description\": \"Deposito\"\r\n        },\r\n        \"credit\": null,\r\n        \"account\": {\r\n            \"id\": null,\r\n            \"accountNumber\": \"04740755562\",\r\n            \"currency\": null,\r\n            \"amountAvailable\": null,\r\n            \"customer\": {\r\n                \"id\": null,\r\n                \"firstname\": \"Jose\",\r\n                \"lastname\": \"Perez Mancilla\",\r\n                \"companyName\": null,\r\n                \"email\": \"joseperez@gmail.com\",\r\n                \"customerType\": {\r\n                    \"id\": null,\r\n                    \"description\": \"personal\"\r\n                },\r\n                \"typeDocumentIdentity\": {\r\n                    \"id\": null,\r\n                    \"description\": \"DNI\"\r\n                },\r\n                \"numberDocumentIdentity\": \"70384565\"\r\n            },\r\n            \"iterator\": 1,\r\n            \"accountType\": {\r\n                \"id\": null,\r\n                \"description\": null,\r\n                \"maintenanceCommission\": null,\r\n                \"amountMonthlyMovements\": 0,\r\n                \"active\": false\r\n            },\r\n            \"active\": false\r\n        },\r\n        \"active\": true\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8084/api/transaction/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"api",
+						"transaction",
+						"update"
+					]
+				},
+				"description": "Actualizacion de una transaccion"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8084/api/transaction/create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"amount\": 120.0,\r\n        \"date\": \"2020-01-11\",\r\n        \"transactionType\": {\r\n            \"id\": \"001\",\r\n            \"description\": \"Deposito\"\r\n        },\r\n        \"account\": {\r\n            \"id\": \"61dc7356d5569b07f408061c\",\r\n            \"accountNumber\": \"04740755562\",\r\n            \"customer\": {\r\n                \"id\": \"61d88559d5569b07f4079a39\",\r\n                \"firstname\": \"Jose\",\r\n                \"lastname\": \"Perez Mancilla\",\r\n                \"email\": \"joseperez@gmail.com\",\r\n                \"customerType\": {\r\n                    \"id\": null,\r\n                    \"description\": \"personal\"\r\n                },\r\n                \"typeDocumentIdentity\": {\r\n                    \"id\": \"1\",\r\n                    \"description\": \"DNI\"\r\n                },\r\n                \"numberDocumentIdentity\": \"70384565\"\r\n            },\r\n            \"iterator\": 2,\r\n            \"accountType\": {\r\n                \"id\": \"001\"\r\n            }\r\n        },\r\n        \"active\": true\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8084/api/transaction/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"api",
+						"transaction",
+						"create"
+					]
+				},
+				"description": "Creacion de una transaccion"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8084/api/transactions/c3ea9ced-00f1-40f2-85b7-e346746e7a38",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8084/api/transactions/c3ea9ced-00f1-40f2-85b7-e346746e7a38",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"api",
+						"transactions",
+						"c3ea9ced-00f1-40f2-85b7-e346746e7a38"
+					]
+				},
+				"description": "Eliminacion de una transaccion"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8084/api/customers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8084/api/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"api",
+						"customers"
+					]
+				},
+				"description": "Listado de todos los clientes registrados"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8084/api/transactions/01545383-c1d3-4c17-be92-a512fc3f14c8",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8084/api/transactions/01545383-c1d3-4c17-be92-a512fc3f14c8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"api",
+						"transactions",
+						"01545383-c1d3-4c17-be92-a512fc3f14c8"
+					]
+				},
+				"description": "Consultar una transaccion especifica por ID"
+			},
+			"response": []
+		}
+	]
+}
