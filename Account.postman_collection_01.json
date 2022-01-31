@@ -1,0 +1,565 @@
+{
+	"info": {
+		"_postman_id": "49326c3b-9e5e-4890-b22a-6c5601155dff",
+		"name": "Account",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:9292/api/accounts-all Copy",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstname\" : \"Jose - not customerType\",\r\n    \"lastname\" : \"Perez Mancilla\",\r\n    \"email\" : \"joseperez@gmail.com\",\r\n    \"address\" : {\r\n        \"type\" : \"Avenida\",\r\n        \"name\" : \"El triunfo\",\r\n        \"number\" : \"N°123\",\r\n        \"province\" : \"Chiclayo\",\r\n        \"district\" : \"Chiclayo\",\r\n        \"department\" : \"Lambayeque\"\r\n    },\r\n    \"telephone\" : \"947689895\",\r\n    \"dateBirth\" : \"10/02/1990\",\r\n    \"sex\" : \"M\",\r\n    \"isActive\" : true,\r\n    \"documentIdentity\" : {\r\n        \"number\" : \"70384565\",\r\n        \"isActive\" : true,\r\n        \"typeDocumentIdentity\" : {\r\n            \"id\" : \"1\",\r\n            \"description\" : \"DNI\",\r\n            \"isActive\" : true\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/api/v1/accounts/61dc7356d5569b07f408061c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"v1",
+						"accounts",
+						"61dc7356d5569b07f408061c"
+					]
+				},
+				"description": "Obtener cuenta bancaria por id"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9292/api/accounts-all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/api/v1/accounts-all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"v1",
+						"accounts-all"
+					]
+				},
+				"description": "Listar todos"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9292/api/accounts/ 61da1a6dd5569b07f407e0ba",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9292/api/accounts/ 61da1a6dd5569b07f407e0ba",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9292",
+					"path": [
+						"api",
+						"accounts",
+						" 61da1a6dd5569b07f407e0ba"
+					]
+				},
+				"description": "eliminar account"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8082/api/customer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/api/v1/customers/61d874f0d5569b07f40795a0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"v1",
+						"customers",
+						"61d874f0d5569b07f40795a0"
+					]
+				},
+				"description": "Listo todos los clientes registrados."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8082/api/account/update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : \"61dc738cd5569b07f4080629\",\r\n    \"accountNumber\" : \"000004\",\r\n    \"currency\" : \"Sóles\",\r\n    \"amountAvailable\" : 156.5,\r\n    \"iterator\" : 1,\r\n    \"isActive\" : true,\r\n    \"customer\" : {\r\n        \"id\" : \"61d88559d5569b07f4079a39\",\r\n        \"firstname\" : \"Jose\",\r\n        \"lastname\" : \"Perez Mancilla\",\r\n        \"email\" : \"joseperez@gmail.com\",\r\n        \"customerType\" : {\r\n            \"id\" : \"1\",\r\n            \"description\" : \"personal\"\r\n        },\r\n        \"numberDocumentIdentity\" : \"70384565\",\r\n        \"typeDocumentIdentity\" : {\r\n            \"id\" : \"1\",\r\n            \"description\" : \"DNI\"\r\n        }\r\n    },\r\n    \"accountType\" : {\r\n        \"id\" : \"001\",\r\n        \"description\" : \"Ahorro\",\r\n        \"maintenanceCommission\" : 0,\r\n        \"amountMonthlyMovements\" : 5,\r\n        \"isActive\" : true\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/api/account/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"account",
+						"update"
+					]
+				},
+				"description": "Actualizacion de una cuenta bancaria"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8082/api/v1/account/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \r\n    \"status\": true,\r\n    \"accountNumber\": \"002582457852236\",\r\n    \"currency\": \"Soles\",\r\n    \"amountAvailable\": 0.0,\r\n    \"accountType\": {\r\n        \"codigo\": \"002\",\r\n        \"description\": \"cuenta corriente\"\r\n    },\r\n    \"maintenanceCommission\": 0,\r\n    \"amountMonthlyMovements\": 3,\r\n    \"customer\": {\r\n        \"id\": \"61d87769d5569b07f4079670\",\r\n        \"companyName\": \"Pinturas Aqua SAC.\",\r\n        \"email\": \"pinturasaquasac@emeal.com\",\r\n        \"numberDocumentIdentity\": \"10780001252\",\r\n        \"customerType\": {\r\n            \"id\": \"2\",\r\n            \"description\": \"empresarial\"\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/api/v1/account/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"v1",
+						"account",
+						""
+					]
+				},
+				"description": "Crear una cuenta"
+			},
+			"response": [
+				{
+					"name": "http://localhost:8082/api/v1/account/",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \r\n    \"status\": true,\r\n    \"accountNumber\": \"002582457852236\",\r\n    \"currency\": \"Soles\",\r\n    \"amountAvailable\": 0.0,\r\n    \"accountType\": {\r\n        \"codigo\": \"002\",\r\n        \"description\": \"cuenta corriente\"\r\n    },\r\n    \"maintenanceCommission\": 0,\r\n    \"amountMonthlyMovements\": 3,\r\n    \"customer\": {\r\n        \"id\": \"61d87769d5569b07f4079670\",\r\n        \"companyName\": \"Pinturas Aqua SAC.\",\r\n        \"email\": \"pinturasaquasac@emeal.com\",\r\n        \"numberDocumentIdentity\": \"10780001252\",\r\n        \"customerType\": {\r\n            \"id\": \"2\",\r\n            \"description\": \"empresarial\"\r\n        }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/api/v1/account/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"v1",
+								"account",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 17 Jan 2022 23:53:16 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"0b1b4d46-3098-47b2-aeaa-93d896a42081\",\n    \"accountNumber\": \"002582457852236\",\n    \"currency\": \"Soles\",\n    \"amountAvailable\": 0,\n    \"status\": \"true\",\n    \"customer\": {\n        \"id\": \"61d87769d5569b07f4079670\",\n        \"firstname\": null,\n        \"lastname\": null,\n        \"companyName\": \"Pinturas Aqua SAC.\",\n        \"email\": \"pinturasaquasac@emeal.com\",\n        \"numberDocumentIdentity\": \"10780001252\",\n        \"customerType\": {\n            \"codigo\": null,\n            \"description\": \"empresarial\"\n        },\n        \"typeDocumentIdentity\": null\n    },\n    \"accountType\": {\n        \"codigo\": \"002\",\n        \"description\": \"cuenta corriente\",\n        \"active\": false\n    },\n    \"maintenanceCommission\": 0,\n    \"amountMonthlyMovements\": 3\n}"
+				}
+			]
+		},
+		{
+			"name": "Actualizar una cuenta",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : \"e0175f31-a709-437f-8d9b-96a5e10dd6cb\",\r\n    \"accountNumber\" : \"002582457852236\",\r\n    \"currency\" : \"Soles\",\r\n    \"amountAvailable\" : 0.0,\r\n    \"status\" : \"true\",\r\n    \"customer\" : {\r\n       \"id\" : \"ye61nn7yf-f630-185e-7r2g-30l5u10il6sc\",\r\n\t    \"companyName\" : \"Pinturas Aqua SAC.\",\r\n        \"email\" : \"pinturasaquasac@emeal.com\",\r\n        \"numberDocumentIdentity\" : \"10780001252\",\r\n        \"customerType\" : {\r\n            \"codigo\": \"002\",\r\n            \"description\" : \"EMPRESARIAL\"\r\n\t    }\r\n    },\r\n    \"accountType\" : {\r\n        \"codigo\" : \"002\",\r\n        \"description\" : \"cuenta corriente\",\r\n        \"isActive\" : true\r\n    },\r\n    \"maintenanceCommission\" : 0.0,\r\n    \"amountMonthlyMovements\" : 3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8008/api/v1/accounts/e0175f31-a709-437f-8d9b-96a5e10dd6cb",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8008",
+					"path": [
+						"api",
+						"v1",
+						"accounts",
+						"e0175f31-a709-437f-8d9b-96a5e10dd6cb"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Actualizar una cuenta",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : \"e0175f31-a709-437f-8d9b-96a5e10dd6cb\",\r\n    \"accountNumber\" : \"002582457852236\",\r\n    \"currency\" : \"Soles\",\r\n    \"amountAvailable\" : 0.0,\r\n    \"status\" : \"true\",\r\n    \"customer\" : {\r\n       \"id\" : \"ye61nn7yf-f630-185e-7r2g-30l5u10il6sc\",\r\n\t    \"companyName\" : \"Pinturas Aqua SAC.\",\r\n        \"email\" : \"pinturasaquasac@emeal.com\",\r\n        \"numberDocumentIdentity\" : \"10780001252\",\r\n        \"customerType\" : {\r\n            \"codigo\": \"002\",\r\n            \"description\" : \"EMPRESARIAL\"\r\n\t    }\r\n    },\r\n    \"accountType\" : {\r\n        \"codigo\" : \"002\",\r\n        \"description\" : \"cuenta corriente\",\r\n        \"isActive\" : true\r\n    },\r\n    \"maintenanceCommission\" : 0.0,\r\n    \"amountMonthlyMovements\" : 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8008/api/v1/accounts/e0175f31-a709-437f-8d9b-96a5e10dd6cb",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8008",
+							"path": [
+								"api",
+								"v1",
+								"accounts",
+								"e0175f31-a709-437f-8d9b-96a5e10dd6cb"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "content-length",
+							"value": "559"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"e0175f31-a709-437f-8d9b-96a5e10dd6cb\",\n    \"accountNumber\": \"002582457852236\",\n    \"currency\": \"Soles\",\n    \"amountAvailable\": 0,\n    \"status\": \"true\",\n    \"customer\": {\n        \"id\": \"ye61nn7yf-f630-185e-7r2g-30l5u10il6sc\",\n        \"firstname\": null,\n        \"lastname\": null,\n        \"companyName\": \"Pinturas Aqua SAC.\",\n        \"email\": \"pinturasaquasac@emeal.com\",\n        \"numberDocumentIdentity\": \"10780001252\",\n        \"customerType\": {\n            \"codigo\": \"002\",\n            \"description\": \"EMPRESARIAL\"\n        },\n        \"typeDocumentIdentity\": null\n    },\n    \"accountType\": {\n        \"codigo\": \"002\",\n        \"description\": \"cuenta corriente\",\n        \"active\": false\n    },\n    \"maintenanceCommission\": 0,\n    \"amountMonthlyMovements\": 3\n}"
+				}
+			]
+		},
+		{
+			"name": "Obtener cuenta por ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8008/api/v1/accounts/e0175f31-a709-437f-8d9b-96a5e10dd6cb",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8008",
+					"path": [
+						"api",
+						"v1",
+						"accounts",
+						"e0175f31-a709-437f-8d9b-96a5e10dd6cb"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Obtener cuenta por ID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8008/api/v1/accounts/e0175f31-a709-437f-8d9b-96a5e10dd6cb",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8008",
+							"path": [
+								"api",
+								"v1",
+								"accounts",
+								"e0175f31-a709-437f-8d9b-96a5e10dd6cb"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "content-length",
+							"value": "559"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"e0175f31-a709-437f-8d9b-96a5e10dd6cb\",\n    \"accountNumber\": \"002582457852236\",\n    \"currency\": \"Soles\",\n    \"amountAvailable\": 0,\n    \"status\": \"true\",\n    \"customer\": {\n        \"id\": \"ye61nn7yf-f630-185e-7r2g-30l5u10il6sc\",\n        \"firstname\": null,\n        \"lastname\": null,\n        \"companyName\": \"Pinturas Aqua SAC.\",\n        \"email\": \"pinturasaquasac@emeal.com\",\n        \"numberDocumentIdentity\": \"10780001252\",\n        \"customerType\": {\n            \"codigo\": \"002\",\n            \"description\": \"EMPRESARIAL\"\n        },\n        \"typeDocumentIdentity\": null\n    },\n    \"accountType\": {\n        \"codigo\": \"002\",\n        \"description\": \"cuenta corriente\",\n        \"active\": false\n    },\n    \"maintenanceCommission\": 0,\n    \"amountMonthlyMovements\": 3\n}"
+				}
+			]
+		},
+		{
+			"name": "Agregar a una cuenta a un cliente existente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : \"02f75f31-a851-437f-8d9b-12a5e10dd7u1\",\r\n    \"maintenanceCommission\" : 0.0,\r\n    \"amountMonthlyMovements\" : 5,\r\n    \"accountNumber\" : \"0000001\",\r\n    \"currency\" : \"Sóles\",\r\n    \"amountAvailable\" : 156.5,\r\n    \"isActive\" : true,\r\n    \"customer\" : {\r\n        \"id\" : \"fa0275f31-a801-437f-8d9b-59a5e10dd6cb\",\r\n        \"firstname\" : \"Manuel\",\r\n\t    \"lastname\" : \"Cruz Mancilla\",\r\n\t    \"email\" : \"joseperez@gmail.com\",\r\n        \"numberDocumentIdentity\" : \"70384565\",\r\n        \"customerType\" : {\r\n            \"codigo\" : \"1\",\r\n            \"description\" : \"personal\"\r\n        },\r\n        \"typeDocumentIdentity\" : {\r\n            \"codigo\" : \"1\",\r\n            \"description\" : \"DNI\"\r\n        }\r\n    },\r\n    \"accountType\" : {\r\n        \"codigo\" : \"001\",\r\n        \"description\" : \"Ahorro\",\r\n        \"isActive\" : true\r\n    }\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8008/api/v1/accounts/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8008",
+					"path": [
+						"api",
+						"v1",
+						"accounts",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Agregar a una cuenta a un cliente existente",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : \"02f75f31-a851-437f-8d9b-12a5e10dd7u1\",\r\n    \"maintenanceCommission\" : 0.0,\r\n    \"amountMonthlyMovements\" : 5,\r\n    \"accountNumber\" : \"0000001\",\r\n    \"currency\" : \"Sóles\",\r\n    \"amountAvailable\" : 156.5,\r\n    \"isActive\" : true,\r\n    \"customer\" : {\r\n        \"id\" : \"fa0275f31-a801-437f-8d9b-59a5e10dd6cb\",\r\n        \"firstname\" : \"Manuel\",\r\n\t    \"lastname\" : \"Cruz Mancilla\",\r\n\t    \"email\" : \"joseperez@gmail.com\",\r\n        \"numberDocumentIdentity\" : \"70384565\",\r\n        \"customerType\" : {\r\n            \"codigo\" : \"1\",\r\n            \"description\" : \"personal\"\r\n        },\r\n        \"typeDocumentIdentity\" : {\r\n            \"codigo\" : \"1\",\r\n            \"description\" : \"DNI\"\r\n        }\r\n    },\r\n    \"accountType\" : {\r\n        \"codigo\" : \"001\",\r\n        \"description\" : \"Ahorro\",\r\n        \"isActive\" : true\r\n    }\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8008/api/v1/accounts/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8008",
+							"path": [
+								"api",
+								"v1",
+								"accounts",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "content-length",
+							"value": "557"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"02f75f31-a851-437f-8d9b-12a5e10dd7u1\",\n    \"accountNumber\": \"0000001\",\n    \"currency\": \"Sóles\",\n    \"amountAvailable\": 156.5,\n    \"status\": null,\n    \"customer\": {\n        \"id\": \"fa0275f31-a801-437f-8d9b-59a5e10dd6cb\",\n        \"firstname\": \"Manuel\",\n        \"lastname\": \"Cruz Mancilla\",\n        \"companyName\": null,\n        \"email\": \"joseperez@gmail.com\",\n        \"numberDocumentIdentity\": \"70384565\",\n        \"customerType\": {\n            \"codigo\": \"1\",\n            \"description\": \"personal\"\n        },\n        \"typeDocumentIdentity\": {\n            \"codigo\": \"1\",\n            \"description\": \"DNI\"\n        }\n    },\n    \"accountType\": {\n        \"codigo\": \"001\",\n        \"description\": \"Ahorro\",\n        \"active\": false\n    },\n    \"maintenanceCommission\": 0,\n    \"amountMonthlyMovements\": 5\n}"
+				}
+			]
+		},
+		{
+			"name": "Obtener todas las cuentas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8008/api/v1/accounts/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8008",
+					"path": [
+						"api",
+						"v1",
+						"accounts",
+						"all"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Obtener todas las cuentas",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8008/api/v1/accounts/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8008",
+							"path": [
+								"api",
+								"v1",
+								"accounts",
+								"all"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "transfer-encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": \"e0175f31-a709-437f-8d9b-96a5e10dd6cb\",\n        \"accountNumber\": \"002582457852236\",\n        \"currency\": \"Soles\",\n        \"amountAvailable\": 0,\n        \"status\": \"true\",\n        \"customer\": {\n            \"id\": \"ye61nn7yf-f630-185e-7r2g-30l5u10il6sc\",\n            \"firstname\": null,\n            \"lastname\": null,\n            \"companyName\": \"Pinturas Aqua SAC.\",\n            \"email\": \"pinturasaquasac@emeal.com\",\n            \"numberDocumentIdentity\": \"10780001252\",\n            \"customerType\": {\n                \"codigo\": \"002\",\n                \"description\": \"EMPRESARIAL\"\n            },\n            \"typeDocumentIdentity\": null\n        },\n        \"accountType\": {\n            \"codigo\": \"002\",\n            \"description\": \"cuenta corriente\",\n            \"active\": false\n        },\n        \"maintenanceCommission\": 0,\n        \"amountMonthlyMovements\": 3\n    },\n    {\n        \"id\": \"45f75f31-a962-437f-8d9b-96a5e10dd7u8\",\n        \"accountNumber\": \"000004\",\n        \"currency\": \"Sóles\",\n        \"amountAvailable\": 0,\n        \"status\": \"true\",\n        \"customer\": {\n            \"id\": \"e0175f31-a709-437f-8d9b-96a5e10dd6cb\",\n            \"firstname\": \"Yennyffer L\",\n            \"lastname\": \"Lizana Pumachari\",\n            \"companyName\": null,\n            \"email\": \"yennyffer@gmail.com\",\n            \"numberDocumentIdentity\": \"72159855\",\n            \"customerType\": {\n                \"codigo\": \"1\",\n                \"description\": \"personal\"\n            },\n            \"typeDocumentIdentity\": {\n                \"codigo\": \"1\",\n                \"description\": \"DNI\"\n            }\n        },\n        \"accountType\": {\n            \"codigo\": \"001\",\n            \"description\": \"Ahorro\",\n            \"active\": false\n        },\n        \"maintenanceCommission\": 0,\n        \"amountMonthlyMovements\": 5\n    },\n    {\n        \"id\": \"02f75f31-a851-437f-8d9b-12a5e10dd7u1\",\n        \"accountNumber\": \"0000001\",\n        \"currency\": \"Sóles\",\n        \"amountAvailable\": 156.5,\n        \"status\": null,\n        \"customer\": {\n            \"id\": \"fa0275f31-a801-437f-8d9b-59a5e10dd6cb\",\n            \"firstname\": \"Manuel\",\n            \"lastname\": \"Cruz Mancilla\",\n            \"companyName\": null,\n            \"email\": \"joseperez@gmail.com\",\n            \"numberDocumentIdentity\": \"70384565\",\n            \"customerType\": {\n                \"codigo\": \"1\",\n                \"description\": \"personal\"\n            },\n            \"typeDocumentIdentity\": {\n                \"codigo\": \"1\",\n                \"description\": \"DNI\"\n            }\n        },\n        \"accountType\": {\n            \"codigo\": \"001\",\n            \"description\": \"Ahorro\",\n            \"active\": false\n        },\n        \"maintenanceCommission\": 0,\n        \"amountMonthlyMovements\": 5\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Obtener un cliente desde Cuentas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8008/api/v1/accounts/customers/fa0275f31-a801-437f-8d9b-59a5e10dd6cb",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8008",
+					"path": [
+						"api",
+						"v1",
+						"accounts",
+						"customers",
+						"fa0275f31-a801-437f-8d9b-59a5e10dd6cb"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Obtener un cliente desde Cuentas",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8008/api/v1/accounts/customers/fa0275f31-a801-437f-8d9b-59a5e10dd6cb",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8008",
+							"path": [
+								"api",
+								"v1",
+								"accounts",
+								"customers",
+								"fa0275f31-a801-437f-8d9b-59a5e10dd6cb"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "content-length",
+							"value": "292"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"fa0275f31-a801-437f-8d9b-59a5e10dd6cb\",\n    \"firstname\": \"Manuel\",\n    \"lastname\": \"Cruz Mancilla\",\n    \"companyName\": null,\n    \"email\": \"joseperez@gmail.com\",\n    \"numberDocumentIdentity\": \"70384565\",\n    \"customerType\": {\n        \"codigo\": \"1\",\n        \"description\": \"personal\"\n    },\n    \"typeDocumentIdentity\": {\n        \"codigo\": \"1\",\n        \"description\": \"DNI\"\n    }\n}"
+				}
+			]
+		}
+	]
+}

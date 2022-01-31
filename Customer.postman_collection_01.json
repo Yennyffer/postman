@@ -1,0 +1,450 @@
+{
+	"info": {
+		"_postman_id": "fd0dce2a-1129-4fa8-a4fb-5e3c6b307229",
+		"name": "Customer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8081/api/customers/61d88559d5569b07f4079a39",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8081/api/v1/customers/61d874f0d5569b07f40795a0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"customers",
+						"61d874f0d5569b07f40795a0"
+					]
+				},
+				"description": "Obtener datos de cliente por id."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/api/customers/61d9d854d5569b07f407c6e1",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/v1/customers/b577d108-13f9-4828-8b28-53fa30bfebf4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"customers",
+						"b577d108-13f9-4828-8b28-53fa30bfebf4"
+					]
+				},
+				"description": "Eliminar"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/api/customers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/v1/customers-all/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"customers-all",
+						""
+					]
+				},
+				"description": "findAll: Encontrar a todos los que tengan un tipo de cliente"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/api/customers/create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n    \"firstname\" : \"prueba\",\r\n    \"lastname\" : \"Psdf\",\r\n    \"email\" : \"joseperez@gmail.com\",\r\n    \"address\" : {\r\n        \"type\" : \"Avenida\",\r\n        \"name\" : \"El triunfo\",\r\n        \"number\" : \"N°123\",\r\n        \"province\" : \"Chiclayo\",\r\n        \"district\" : \"Chiclayo\",\r\n        \"department\" : \"Lambayeque\"\r\n    },\r\n    \"telephone\" : \"947689895\",\r\n    \"dateBirth\" : \"1990-02-10\",\r\n    \"gender\" : \"M\",\r\n    \"isActive\" : true,\r\n    \"customerType\" : {\r\n        \"codigo\" : \"1\",\r\n        \"description\" : \"personal\",\r\n        \"isActive\" : true\r\n    },\r\n    \"numberDocumentIdentity\" : \"70384565\",\r\n    \"typeDocumentIdentity\" : {\r\n            \"codigo\" : \"1\",\r\n            \"description\" : \"DNI\",\r\n            \"isActive\" : true\r\n        },\r\n    \"customerProfile\" : {\r\n        \"codigo\" : \"1\",\r\n        \"description\" : \"VIP\",\r\n        \"status\" : true\r\n    }\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/v1/customers/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"customers",
+						""
+					]
+				},
+				"description": "Creacion de usuario"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/api/customers/update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"id\": \"61d88559d5569b07f4079a39\",\r\n    \"firstname\": \"José\",\r\n    \"lastname\": \"Pérez Mancilla\",\r\n    \"companyName\": \"solti\",\r\n    \"email\": \"joseperez@gmail.com\",\r\n    \"address\": {\r\n        \"type\": \"Avenida\",\r\n        \"name\": \"El triunfo\",\r\n        \"number\": \"N°123\",\r\n        \"province\": \"Chiclayo\",\r\n        \"district\": \"Chiclayo\",\r\n        \"department\": \"Lambayeque\"\r\n    },\r\n    \"telephone\": \"947689895\",\r\n    \"dateBirth\": \"1990-10-02T05:00:00.000+00:00\",\r\n    \"gender\": \"M\",\r\n    \"numberDocumentIdentity\": \"70384565\",\r\n    \"typeDocumentIdentity\": {\r\n        \"id\": \"1\",\r\n        \"description\": \"DNI\",\r\n        \"active\": true\r\n    },\r\n    \"customerType\": {\r\n        \"id\": \"1\",\r\n        \"description\": \"personal\",\r\n        \"active\": true\r\n    },\r\n    \"active\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/customers/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"customers",
+						"update"
+					]
+				},
+				"description": "Actualizacion"
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener un cliente por id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8008/api/v1/customers/61d874f0d5569b07f40795a0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8008",
+					"path": [
+						"api",
+						"v1",
+						"customers",
+						"61d874f0d5569b07f40795a0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener cliente por DNI",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8008/api/v1/customers/numberDocumentIdentity/72159855",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8008",
+					"path": [
+						"api",
+						"v1",
+						"customers",
+						"numberDocumentIdentity",
+						"72159855"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar registros",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"e0175f31-a709-437f-8d9b-96a5e10dd6cb\",\r\n    \"firstname\" : \"Yennyffer L\",\r\n    \"lastname\" : \"Lizana Pumachari\",\r\n    \"email\" : \"yennyffer@gmail.com\",\r\n    \"telephone\" : \"951476765\",\r\n    \"dateBirth\" : \"1990-02-10\",\r\n    \"gender\" : \"M\",\r\n    \"isActive\" : true,\r\n    \"status\" : \"ACTIVO\",\r\n    \"numberDocumentIdentity\" : \"72159855\",\r\n    \"typeDocumentIdentity\" : {\r\n        \"codigo\" : \"1\",\r\n        \"description\" : \"DNI\",\r\n        \"isActive\" : false\r\n    },\r\n    \"customerType\" : {\r\n        \"codigo\" : \"1\",\r\n        \"description\" : \"personal\",\r\n        \"isActive\" : false\r\n    },\r\n    \"httpStatus\" : \"OK\",\r\n    \"customerProfile\" : {\r\n        \"codigo\" : \"1\",\r\n        \"description\" : \"VIP\",\r\n        \"status\" : true\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8008/api/v1/customers/e0175f31-a709-437f-8d9b-96a5e10dd6cb",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8008",
+					"path": [
+						"api",
+						"v1",
+						"customers",
+						"e0175f31-a709-437f-8d9b-96a5e10dd6cb"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Actualizar registros",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"e0175f31-a709-437f-8d9b-96a5e10dd6cb\",\r\n    \"firstname\" : \"Yennyffer L\",\r\n    \"lastname\" : \"Lizana Pumachari\",\r\n    \"email\" : \"yennyffer@gmail.com\",\r\n    \"telephone\" : \"951476765\",\r\n    \"dateBirth\" : \"1990-02-10\",\r\n    \"gender\" : \"M\",\r\n    \"isActive\" : true,\r\n    \"status\" : \"ACTIVO\",\r\n    \"numberDocumentIdentity\" : \"72159855\",\r\n    \"typeDocumentIdentity\" : {\r\n        \"codigo\" : \"1\",\r\n        \"description\" : \"DNI\",\r\n        \"isActive\" : false\r\n    },\r\n    \"customerType\" : {\r\n        \"codigo\" : \"1\",\r\n        \"description\" : \"personal\",\r\n        \"isActive\" : false\r\n    },\r\n    \"httpStatus\" : \"OK\",\r\n    \"customerProfile\" : {\r\n        \"codigo\" : \"1\",\r\n        \"description\" : \"VIP\",\r\n        \"status\" : true\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8008/api/v1/customers/e0175f31-a709-437f-8d9b-96a5e10dd6cb",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8008",
+							"path": [
+								"api",
+								"v1",
+								"customers",
+								"e0175f31-a709-437f-8d9b-96a5e10dd6cb"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "content-length",
+							"value": "524"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"e0175f31-a709-437f-8d9b-96a5e10dd6cb\",\n    \"firstname\": \"Yennyffer L\",\n    \"lastname\": \"Lizana Pumachari\",\n    \"companyName\": null,\n    \"email\": \"yennyffer@gmail.com\",\n    \"address\": null,\n    \"telephone\": \"951476765\",\n    \"dateBirth\": \"1990-02-10\",\n    \"gender\": \"M\",\n    \"status\": \"ACTIVO\",\n    \"numberDocumentIdentity\": \"72159855\",\n    \"typeDocumentIdentity\": {\n        \"codigo\": \"1\",\n        \"description\": \"DNI\",\n        \"active\": false\n    },\n    \"customerType\": {\n        \"codigo\": \"1\",\n        \"description\": \"personal\",\n        \"active\": false\n    },\n    \"httpStatus\": \"OK\",\n    \"customerProfile\": {\n        \"codigo\": \"1\",\n        \"description\": \"VIP\",\n        \"status\": true\n    },\n    \"active\": false\n}"
+				},
+				{
+					"name": "Actualizar registros",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : \"61dc7dd7d5569b07f40808dd\",\r\n    \"firstname\" : \"SOLTI SAC\",\r\n    \"lastname\" : \"SOLTI SAC\",\r\n    \"companyName\" : \"SOLTI S.A.C.\",\r\n    \"email\" : \"soltisacperu@gmail.com\",\r\n    \"address\" : {\r\n        \"type\" : \"Avenida\",\r\n        \"name\" : \"Luis Gonzales\",\r\n        \"number\" : \"N°1023\",\r\n        \"province\" : \"Chiclayo\",\r\n        \"district\" : \"Chiclayo\",\r\n        \"department\" : \"Lambayeque\"\r\n    },\r\n    \"telephone\" : \"074502436\",\r\n    \"dateBirth\" : \"2016-10-02\",\r\n    \"isActive\" : true,\r\n    \"status\" : \"ACTIVO\",\r\n    \"numberDocumentIdentity\" : \"20721030508\",\r\n    \"typeDocumentIdentity\" : {\r\n        \"codigo\" : \"2\",\r\n        \"description\" : \"RUC\",\r\n        \"isActive\" : true\r\n    },\r\n    \"customerType\" : {\r\n        \"codigo\" : \"2\",\r\n        \"description\" : \"empresarial\",\r\n        \"isActive\" : true\r\n    },\r\n    \"customerProfile\" : {\r\n        \"codigo\" : \"2\",\r\n        \"description\" : \"MYPE\",\r\n        \"status\" : true\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8008/api/v1/customers/61dc7dd7d5569b07f40808dd",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8008",
+							"path": [
+								"api",
+								"v1",
+								"customers",
+								"61dc7dd7d5569b07f40808dd"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "content-length",
+							"value": "654"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"61dc7dd7d5569b07f40808dd\",\n    \"firstname\": \"SOLTI SAC\",\n    \"lastname\": \"SOLTI SAC\",\n    \"companyName\": \"SOLTI S.A.C.\",\n    \"email\": \"soltisacperu@gmail.com\",\n    \"address\": {\n        \"type\": \"Avenida\",\n        \"name\": \"Luis Gonzales\",\n        \"number\": \"N°1023\",\n        \"province\": \"Chiclayo\",\n        \"district\": \"Chiclayo\",\n        \"department\": \"Lambayeque\"\n    },\n    \"telephone\": \"074502436\",\n    \"dateBirth\": \"2016-10-02\",\n    \"gender\": \"\\u0000\",\n    \"status\": \"ACTIVO\",\n    \"numberDocumentIdentity\": \"20721030508\",\n    \"typeDocumentIdentity\": {\n        \"codigo\": \"2\",\n        \"description\": \"RUC\",\n        \"active\": false\n    },\n    \"customerType\": {\n        \"codigo\": \"2\",\n        \"description\": \"empresarial\",\n        \"active\": false\n    },\n    \"httpStatus\": null,\n    \"customerProfile\": {\n        \"codigo\": \"2\",\n        \"description\": \"MYPE\",\n        \"status\": true\n    },\n    \"active\": false\n}"
+				}
+			]
+		},
+		{
+			"name": "Agregar un nuevo cliente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : \"ye61nn7yf-f630-185e-7r2g-30l5u10il6sc\",\r\n\t\"companyName\" : \"Pinturas Aqua SAC.\",\r\n    \"email\" : \"pinturasaquasac@emeal.com\",\r\n    \"address\" : {\r\n        \"type\" : \"Avenida\",\r\n        \"name\" : \"Luis Gonzales\",\r\n        \"number\" : \"N°1130\",\r\n        \"province\" : \"Chiclayo\",\r\n        \"district\" : \"Chiclayo\",\r\n        \"department\" : \"Lambayeque\"\r\n    },\r\n    \"telephone\" : \"074502490\",\r\n    \"isActive\" : true,\r\n    \"status\" : \"ACTIVO\",\r\n    \"customerType\" : {\r\n        \"codigo\" : \"2\",\r\n        \"description\" : \"empresarial\"\r\n    },\r\n    \"numberDocumentIdentity\" : \"10780001252\",\r\n    \"typeDocumentIdentity\" : {\r\n        \"codigo\" : \"3\",\r\n        \"description\" : \"RUC\"\r\n    },\r\n    \"customerProfile\" : {\r\n        \"codigo\" : \"2\",\r\n        \"description\" : \"PYME\",\r\n        \"status\" : true\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8008/api/v1/customers/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8008",
+					"path": [
+						"api",
+						"v1",
+						"customers",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Agregar un nuevo cliente",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : \"ye61nn7yf-f630-185e-7r2g-30l5u10il6sc\",\r\n\t\"companyName\" : \"Pinturas Aqua SAC.\",\r\n    \"email\" : \"pinturasaquasac@emeal.com\",\r\n    \"address\" : {\r\n        \"type\" : \"Avenida\",\r\n        \"name\" : \"Luis Gonzales\",\r\n        \"number\" : \"N°1130\",\r\n        \"province\" : \"Chiclayo\",\r\n        \"district\" : \"Chiclayo\",\r\n        \"department\" : \"Lambayeque\"\r\n    },\r\n    \"telephone\" : \"074502490\",\r\n    \"isActive\" : true,\r\n    \"status\" : \"ACTIVO\",\r\n    \"customerType\" : {\r\n        \"codigo\" : \"2\",\r\n        \"description\" : \"empresarial\"\r\n    },\r\n    \"numberDocumentIdentity\" : \"10780001252\",\r\n    \"typeDocumentIdentity\" : {\r\n        \"codigo\" : \"3\",\r\n        \"description\" : \"RUC\"\r\n    },\r\n    \"customerProfile\" : {\r\n        \"codigo\" : \"2\",\r\n        \"description\" : \"PYME\",\r\n        \"status\" : true\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8008/api/v1/customers/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8008",
+							"path": [
+								"api",
+								"v1",
+								"customers",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "content-length",
+							"value": "654"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"ye61nn7yf-f630-185e-7r2g-30l5u10il6sc\",\n    \"firstname\": null,\n    \"lastname\": null,\n    \"companyName\": \"Pinturas Aqua SAC.\",\n    \"email\": \"pinturasaquasac@emeal.com\",\n    \"address\": {\n        \"type\": \"Avenida\",\n        \"name\": \"Luis Gonzales\",\n        \"number\": \"N°1130\",\n        \"province\": \"Chiclayo\",\n        \"district\": \"Chiclayo\",\n        \"department\": \"Lambayeque\"\n    },\n    \"telephone\": \"074502490\",\n    \"dateBirth\": null,\n    \"gender\": \"\\u0000\",\n    \"status\": \"ACTIVO\",\n    \"numberDocumentIdentity\": \"10780001252\",\n    \"typeDocumentIdentity\": {\n        \"codigo\": \"3\",\n        \"description\": \"RUC\",\n        \"active\": false\n    },\n    \"customerType\": {\n        \"codigo\": \"2\",\n        \"description\": \"EMPRESARIAL\",\n        \"active\": false\n    },\n    \"httpStatus\": \"OK\",\n    \"customerProfile\": {\n        \"codigo\": \"2\",\n        \"description\": \"PYME\",\n        \"status\": true\n    },\n    \"active\": false\n}"
+				}
+			]
+		},
+		{
+			"name": "Obtener todos los registros Customers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8008/api/v1/customers/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8008",
+					"path": [
+						"api",
+						"v1",
+						"customers",
+						"all"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Obtener todos los registros Customers",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8008/api/v1/customers/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8008",
+							"path": [
+								"api",
+								"v1",
+								"customers",
+								"all"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "transfer-encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": \"e0175f31-a709-437f-8d9b-96a5e10dd6cb\",\n        \"firstname\": \"Yennyffer L\",\n        \"lastname\": \"Lizana Pumachari\",\n        \"companyName\": null,\n        \"email\": \"yennyffer@gmail.com\",\n        \"address\": null,\n        \"telephone\": \"951476765\",\n        \"dateBirth\": \"1990-02-10\",\n        \"gender\": \"M\",\n        \"status\": \"ACTIVO\",\n        \"numberDocumentIdentity\": \"72159855\",\n        \"typeDocumentIdentity\": {\n            \"codigo\": \"1\",\n            \"description\": \"DNI\",\n            \"active\": false\n        },\n        \"customerType\": {\n            \"codigo\": \"1\",\n            \"description\": \"personal\",\n            \"active\": false\n        },\n        \"httpStatus\": \"OK\",\n        \"customerProfile\": {\n            \"codigo\": \"1\",\n            \"description\": \"VIP\",\n            \"status\": true\n        },\n        \"active\": false\n    },\n    {\n        \"id\": \"fa0275f31-a801-437f-8d9b-59a5e10dd6cb\",\n        \"firstname\": \"Manuel\",\n        \"lastname\": \"Cruz Mancilla\",\n        \"companyName\": null,\n        \"email\": \"joseperez@gmail.com\",\n        \"address\": {\n            \"type\": \"Avenida\",\n            \"name\": \"El triunfo\",\n            \"number\": \"N°123\",\n            \"province\": \"Chiclayo\",\n            \"district\": \"Chiclayo\",\n            \"department\": \"Lambayeque\"\n        },\n        \"telephone\": \"947689895\",\n        \"dateBirth\": \"1990-02-19\",\n        \"gender\": \"M\",\n        \"status\": \"ACTIVO\",\n        \"numberDocumentIdentity\": \"70384565\",\n        \"typeDocumentIdentity\": {\n            \"codigo\": \"1\",\n            \"description\": \"DNI\",\n            \"active\": false\n        },\n        \"customerType\": {\n            \"codigo\": \"1\",\n            \"description\": \"personal\",\n            \"active\": false\n        },\n        \"httpStatus\": null,\n        \"customerProfile\": {\n            \"codigo\": \"1\",\n            \"description\": \"VIP\",\n            \"status\": true\n        },\n        \"active\": false\n    },\n    {\n        \"id\": \"pe61dc7dd-c630-185d-7a2g-30a5e10al6dd\",\n        \"firstname\": null,\n        \"lastname\": null,\n        \"companyName\": \"SOLTI S.A.C.\",\n        \"email\": \"soltisacperu@gmail.com\",\n        \"address\": {\n            \"type\": \"Avenida\",\n            \"name\": \"Luis Gonzales\",\n            \"number\": \"N°1023\",\n            \"province\": \"Chiclayo\",\n            \"district\": \"Chiclayo\",\n            \"department\": \"Lambayeque\"\n        },\n        \"telephone\": \"074502436\",\n        \"dateBirth\": \"2020-11-05\",\n        \"gender\": \"\\u0000\",\n        \"status\": \"ACTIVO\",\n        \"numberDocumentIdentity\": \"20721030508\",\n        \"typeDocumentIdentity\": {\n            \"codigo\": \"3\",\n            \"description\": \"RUC\",\n            \"active\": false\n        },\n        \"customerType\": {\n            \"codigo\": \"3\",\n            \"description\": \"RUC\",\n            \"active\": false\n        },\n        \"httpStatus\": null,\n        \"customerProfile\": {\n            \"codigo\": \"2\",\n            \"description\": \"MYPE\",\n            \"status\": false\n        },\n        \"active\": false\n    },\n    {\n        \"id\": \"ye61nn7yf-f630-185e-7r2g-30l5u10il6sc\",\n        \"firstname\": null,\n        \"lastname\": null,\n        \"companyName\": \"Pinturas Aqua SAC.\",\n        \"email\": \"pinturasaquasac@emeal.com\",\n        \"address\": {\n            \"type\": \"Avenida\",\n            \"name\": \"Luis Gonzales\",\n            \"number\": \"N°1130\",\n            \"province\": \"Chiclayo\",\n            \"district\": \"Chiclayo\",\n            \"department\": \"Lambayeque\"\n        },\n        \"telephone\": \"074502490\",\n        \"dateBirth\": null,\n        \"gender\": \"\\u0000\",\n        \"status\": \"ACTIVO\",\n        \"numberDocumentIdentity\": \"10780001252\",\n        \"typeDocumentIdentity\": {\n            \"codigo\": \"3\",\n            \"description\": \"RUC\",\n            \"active\": false\n        },\n        \"customerType\": {\n            \"codigo\": \"2\",\n            \"description\": \"EMPRESARIAL\",\n            \"active\": false\n        },\n        \"httpStatus\": \"OK\",\n        \"customerProfile\": {\n            \"codigo\": \"2\",\n            \"description\": \"PYME\",\n            \"status\": true\n        },\n        \"active\": false\n    }\n]"
+				}
+			]
+		}
+	]
+}

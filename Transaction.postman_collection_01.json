@@ -1,0 +1,432 @@
+{
+	"info": {
+		"_postman_id": "79eaaa09-6246-473e-b6d2-88c1a75ca72a",
+		"name": "Transaction",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8084/api/transactions-all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8084/api/transactions-all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"api",
+						"transactions-all"
+					]
+				},
+				"description": "Todas las transacciones registradas"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8084/api/transaction/update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": \"61ddc14a396d3db796c2f92a\",\r\n        \"amount\": 52.0,\r\n        \"date\": \"2022-10-10T05:00:00.000+00:00\",\r\n        \"transactionType\": {\r\n            \"id\": null,\r\n            \"description\": \"Deposito\"\r\n        },\r\n        \"credit\": null,\r\n        \"account\": {\r\n            \"id\": null,\r\n            \"accountNumber\": \"04740755562\",\r\n            \"currency\": null,\r\n            \"amountAvailable\": null,\r\n            \"customer\": {\r\n                \"id\": null,\r\n                \"firstname\": \"Jose\",\r\n                \"lastname\": \"Perez Mancilla\",\r\n                \"companyName\": null,\r\n                \"email\": \"joseperez@gmail.com\",\r\n                \"customerType\": {\r\n                    \"id\": null,\r\n                    \"description\": \"personal\"\r\n                },\r\n                \"typeDocumentIdentity\": {\r\n                    \"id\": null,\r\n                    \"description\": \"DNI\"\r\n                },\r\n                \"numberDocumentIdentity\": \"70384565\"\r\n            },\r\n            \"iterator\": 1,\r\n            \"accountType\": {\r\n                \"id\": null,\r\n                \"description\": null,\r\n                \"maintenanceCommission\": null,\r\n                \"amountMonthlyMovements\": 0,\r\n                \"active\": false\r\n            },\r\n            \"active\": false\r\n        },\r\n        \"active\": true\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8084/api/transaction/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"api",
+						"transaction",
+						"update"
+					]
+				},
+				"description": "Actualizacion de una transaccion"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8084/api/transaction/create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"amount\": 120.0,\r\n        \"date\": \"2020-01-11\",\r\n        \"transactionType\": {\r\n            \"id\": \"001\",\r\n            \"description\": \"Deposito\"\r\n        },\r\n        \"account\": {\r\n            \"id\": \"61dc7356d5569b07f408061c\",\r\n            \"accountNumber\": \"04740755562\",\r\n            \"customer\": {\r\n                \"id\": \"61d88559d5569b07f4079a39\",\r\n                \"firstname\": \"Jose\",\r\n                \"lastname\": \"Perez Mancilla\",\r\n                \"email\": \"joseperez@gmail.com\",\r\n                \"customerType\": {\r\n                    \"id\": null,\r\n                    \"description\": \"personal\"\r\n                },\r\n                \"typeDocumentIdentity\": {\r\n                    \"id\": \"1\",\r\n                    \"description\": \"DNI\"\r\n                },\r\n                \"numberDocumentIdentity\": \"70384565\"\r\n            },\r\n            \"iterator\": 2,\r\n            \"accountType\": {\r\n                \"id\": \"001\"\r\n            }\r\n        },\r\n        \"active\": true\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8084/api/transaction/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"api",
+						"transaction",
+						"create"
+					]
+				},
+				"description": "Creacion de una transaccion"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8084/api/transactions/c3ea9ced-00f1-40f2-85b7-e346746e7a38",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8084/api/transactions/c3ea9ced-00f1-40f2-85b7-e346746e7a38",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"api",
+						"transactions",
+						"c3ea9ced-00f1-40f2-85b7-e346746e7a38"
+					]
+				},
+				"description": "Eliminacion de una transaccion"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8084/api/customers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8084/api/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"api",
+						"customers"
+					]
+				},
+				"description": "Listado de todos los clientes registrados"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8084/api/transactions/01545383-c1d3-4c17-be92-a512fc3f14c8",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8084/api/transactions/01545383-c1d3-4c17-be92-a512fc3f14c8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"api",
+						"transactions",
+						"01545383-c1d3-4c17-be92-a512fc3f14c8"
+					]
+				},
+				"description": "Consultar una transaccion especifica por ID"
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar una transaccion",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : \"01545383-c1d3-4c17-be92-a512fc3f14c8\",\r\n    \"amount\" : 120.0,\r\n    \"date\" : \"2020-01-27\",\r\n    \"transactionType\" : {\r\n        \"codigo\" : \"001\",\r\n        \"description\" : \"Deposito\"\r\n    },\r\n    \"account\" : {\r\n        \"id\" : \"02f75f31-a851-437f-8d9b-12a5e10dd7u1\",\r\n\t    \"accountNumber\" : \"0000001\",\r\n        \"customer\" : {\r\n\t\t\"_id\" : \"fa0275f31-a801-437f-8d9b-59a5e10dd6cb\",\r\n\t\t\"firstname\" : \"Manuel\",\r\n\t\t\"lastname\" : \"Cruz Mancilla\",\r\n\t\t\"email\" : \"joseperez@gmail.com\",\r\n\t\t\"numberDocumentIdentity\" : \"70384565\",\r\n\t\t\"customerType\" : {\r\n\t\t\t\"codigo\" : \"1\",\r\n\t\t\t\"description\" : \"personal\"\r\n\t\t},\r\n\t\t\"typeDocumentIdentity\" : {\r\n\t\t\t\"codigo\" : \"1\",\r\n\t\t\t\"description\" : \"DNI\"\r\n\t\t}\r\n\t},\r\n        \"isActive\" : true,\r\n        \"accountType\" : {\r\n            \"codigo\" : \"001\",\r\n            \"description\" : \"Ahorro\",\r\n            \"isActive\" : true\r\n\t    }\r\n    },\r\n    \"status\" : \"ACTIVO\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8008/api/v1/transacctions/01545383-c1d3-4c17-be92-a512fc3f14c8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8008",
+					"path": [
+						"api",
+						"v1",
+						"transacctions",
+						"01545383-c1d3-4c17-be92-a512fc3f14c8"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Actualizar una transaccion",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : \"01545383-c1d3-4c17-be92-a512fc3f14c8\",\r\n    \"amount\" : 120.0,\r\n    \"date\" : \"2020-01-27\",\r\n    \"transactionType\" : {\r\n        \"codigo\" : \"001\",\r\n        \"description\" : \"Deposito\"\r\n    },\r\n    \"account\" : {\r\n        \"id\" : \"02f75f31-a851-437f-8d9b-12a5e10dd7u1\",\r\n\t    \"accountNumber\" : \"0000001\",\r\n        \"customer\" : {\r\n\t\t\"_id\" : \"fa0275f31-a801-437f-8d9b-59a5e10dd6cb\",\r\n\t\t\"firstname\" : \"Manuel\",\r\n\t\t\"lastname\" : \"Cruz Mancilla\",\r\n\t\t\"email\" : \"joseperez@gmail.com\",\r\n\t\t\"numberDocumentIdentity\" : \"70384565\",\r\n\t\t\"customerType\" : {\r\n\t\t\t\"codigo\" : \"1\",\r\n\t\t\t\"description\" : \"personal\"\r\n\t\t},\r\n\t\t\"typeDocumentIdentity\" : {\r\n\t\t\t\"codigo\" : \"1\",\r\n\t\t\t\"description\" : \"DNI\"\r\n\t\t}\r\n\t},\r\n        \"isActive\" : true,\r\n        \"accountType\" : {\r\n            \"codigo\" : \"001\",\r\n            \"description\" : \"Ahorro\",\r\n            \"isActive\" : true\r\n\t    }\r\n    },\r\n    \"status\" : \"ACTIVO\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8008/api/v1/transacctions/01545383-c1d3-4c17-be92-a512fc3f14c8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8008",
+							"path": [
+								"api",
+								"v1",
+								"transacctions",
+								"01545383-c1d3-4c17-be92-a512fc3f14c8"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "content-length",
+							"value": "707"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"01545383-c1d3-4c17-be92-a512fc3f14c8\",\n    \"amount\": 120,\n    \"date\": \"2020-01-27\",\n    \"transactionType\": {\n        \"codigo\": \"001\",\n        \"description\": \"Deposito\"\n    },\n    \"credit\": null,\n    \"account\": {\n        \"id\": \"02f75f31-a851-437f-8d9b-12a5e10dd7u1\",\n        \"accountNumber\": \"0000001\",\n        \"currency\": null,\n        \"amountAvailable\": null,\n        \"customer\": {\n            \"id\": null,\n            \"firstname\": \"Manuel\",\n            \"lastname\": \"Cruz Mancilla\",\n            \"companyName\": null,\n            \"email\": \"joseperez@gmail.com\",\n            \"customerType\": {\n                \"codigo\": \"1\",\n                \"description\": \"personal\"\n            },\n            \"typeDocumentIdentity\": {\n                \"id\": null,\n                \"description\": \"DNI\"\n            },\n            \"numberDocumentIdentity\": \"70384565\"\n        },\n        \"iterator\": 0,\n        \"accountType\": {\n            \"id\": null,\n            \"description\": \"Ahorro\",\n            \"maintenanceCommission\": null,\n            \"amountMonthlyMovements\": 0,\n            \"active\": false\n        },\n        \"active\": false\n    },\n    \"status\": \"ACTIVO\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Creación de una transaccion",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : \"01545383-c1d3-4c17-be92-a512fc3f14c8\",\r\n    \"amount\" : 120.0,\r\n    \"date\" : \"2020-01-27\",\r\n    \"transactionType\" : {\r\n        \"codigo\" : \"001\",\r\n        \"description\" : \"Deposito\"\r\n    },\r\n    \"account\" : {\r\n        \"id\" : \"02f75f31-a851-437f-8d9b-12a5e10dd7u1\",\r\n\t    \"accountNumber\" : \"0000001\",\r\n        \"customer\" : {\r\n\t\t\"_id\" : \"fa0275f31-a801-437f-8d9b-59a5e10dd6cb\",\r\n\t\t\"firstname\" : \"Manuel\",\r\n\t\t\"lastname\" : \"Cruz Mancilla\",\r\n\t\t\"email\" : \"joseperez@gmail.com\",\r\n\t\t\"numberDocumentIdentity\" : \"70384565\",\r\n\t\t\"customerType\" : {\r\n\t\t\t\"codigo\" : \"1\",\r\n\t\t\t\"description\" : \"personal\"\r\n\t\t},\r\n\t\t\"typeDocumentIdentity\" : {\r\n\t\t\t\"codigo\" : \"1\",\r\n\t\t\t\"description\" : \"DNI\"\r\n\t\t}\r\n\t},\r\n        \"isActive\" : true,\r\n        \"accountType\" : {\r\n            \"codigo\" : \"001\",\r\n            \"description\" : \"Ahorro\",\r\n            \"isActive\" : true\r\n\t    }\r\n    },\r\n    \"status\" : \"ACTIVO\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8008/api/v1/transacctions/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8008",
+					"path": [
+						"api",
+						"v1",
+						"transacctions",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Creación de una transaccion",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : \"01545383-c1d3-4c17-be92-a512fc3f14c9\",\r\n    \"amount\" : 60.0,\r\n    \"date\" : \"2020-01-27\",\r\n    \"transactionType\" : {\r\n        \"codigo\" : \"001\",\r\n        \"description\" : \"Deposito\"\r\n    },\r\n    \"account\" : {\r\n        \"id\" : \"02f75f31-a851-437f-8d9b-12a5e10dd7u1\",\r\n\t    \"accountNumber\" : \"0000001\",\r\n        \"customer\" : {\r\n\t\t\"_id\" : \"fa0275f31-a801-437f-8d9b-59a5e10dd6cb\",\r\n\t\t\"firstname\" : \"Manuel\",\r\n\t\t\"lastname\" : \"Cruz Mancilla\",\r\n\t\t\"email\" : \"joseperez@gmail.com\",\r\n\t\t\"numberDocumentIdentity\" : \"70384565\",\r\n\t\t\"customerType\" : {\r\n\t\t\t\"codigo\" : \"1\",\r\n\t\t\t\"description\" : \"personal\"\r\n\t\t},\r\n\t\t\"typeDocumentIdentity\" : {\r\n\t\t\t\"codigo\" : \"1\",\r\n\t\t\t\"description\" : \"DNI\"\r\n\t\t}\r\n\t},\r\n        \"isActive\" : true,\r\n        \"accountType\" : {\r\n            \"codigo\" : \"001\",\r\n            \"description\" : \"Ahorro\",\r\n            \"isActive\" : true\r\n\t    }\r\n    },\r\n    \"status\" : \"ACTIVO\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8008/api/v1/transacctions/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8008",
+							"path": [
+								"api",
+								"v1",
+								"transacctions",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "content-length",
+							"value": "706"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"01545383-c1d3-4c17-be92-a512fc3f14c9\",\n    \"amount\": 60,\n    \"date\": \"2020-01-27\",\n    \"transactionType\": {\n        \"codigo\": \"001\",\n        \"description\": \"Deposito\"\n    },\n    \"credit\": null,\n    \"account\": {\n        \"id\": \"02f75f31-a851-437f-8d9b-12a5e10dd7u1\",\n        \"accountNumber\": \"0000001\",\n        \"currency\": null,\n        \"amountAvailable\": null,\n        \"customer\": {\n            \"id\": null,\n            \"firstname\": \"Manuel\",\n            \"lastname\": \"Cruz Mancilla\",\n            \"companyName\": null,\n            \"email\": \"joseperez@gmail.com\",\n            \"customerType\": {\n                \"codigo\": \"1\",\n                \"description\": \"personal\"\n            },\n            \"typeDocumentIdentity\": {\n                \"id\": null,\n                \"description\": \"DNI\"\n            },\n            \"numberDocumentIdentity\": \"70384565\"\n        },\n        \"iterator\": 0,\n        \"accountType\": {\n            \"id\": null,\n            \"description\": \"Ahorro\",\n            \"maintenanceCommission\": null,\n            \"amountMonthlyMovements\": 0,\n            \"active\": false\n        },\n        \"active\": false\n    },\n    \"status\": \"ACTIVO\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Obtener todas las transacciones",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8008/api/v1/transacctions/customers/ye61nn7yf-f630-185e-7r2g-30l5u10il6sc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8008",
+					"path": [
+						"api",
+						"v1",
+						"transacctions",
+						"customers",
+						"ye61nn7yf-f630-185e-7r2g-30l5u10il6sc"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Obtener todas las transacciones",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8008/api/v1/transacctions/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8008",
+							"path": [
+								"api",
+								"v1",
+								"transacctions",
+								"all"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "transfer-encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": \"01545383-c1d3-4c17-be92-a512fc3f14c8\",\n        \"amount\": 120,\n        \"date\": \"2020-01-27\",\n        \"transactionType\": {\n            \"codigo\": \"001\",\n            \"description\": \"Deposito\"\n        },\n        \"credit\": null,\n        \"account\": {\n            \"id\": \"02f75f31-a851-437f-8d9b-12a5e10dd7u1\",\n            \"accountNumber\": \"0000001\",\n            \"currency\": null,\n            \"amountAvailable\": null,\n            \"customer\": {\n                \"id\": null,\n                \"firstname\": \"Manuel\",\n                \"lastname\": \"Cruz Mancilla\",\n                \"companyName\": null,\n                \"email\": \"joseperez@gmail.com\",\n                \"customerType\": {\n                    \"codigo\": \"1\",\n                    \"description\": \"personal\"\n                },\n                \"typeDocumentIdentity\": {\n                    \"id\": null,\n                    \"description\": \"DNI\"\n                },\n                \"numberDocumentIdentity\": \"70384565\"\n            },\n            \"iterator\": 0,\n            \"accountType\": {\n                \"id\": null,\n                \"description\": \"Ahorro\",\n                \"maintenanceCommission\": null,\n                \"amountMonthlyMovements\": 0,\n                \"active\": false\n            },\n            \"active\": false\n        },\n        \"status\": \"ACTIVO\"\n    },\n    {\n        \"id\": \"01545383-c1d3-4c17-be92-a512fc3f14c9\",\n        \"amount\": 60,\n        \"date\": \"2020-01-27\",\n        \"transactionType\": {\n            \"codigo\": \"001\",\n            \"description\": \"Deposito\"\n        },\n        \"credit\": null,\n        \"account\": {\n            \"id\": \"02f75f31-a851-437f-8d9b-12a5e10dd7u1\",\n            \"accountNumber\": \"0000001\",\n            \"currency\": null,\n            \"amountAvailable\": null,\n            \"customer\": {\n                \"id\": null,\n                \"firstname\": \"Manuel\",\n                \"lastname\": \"Cruz Mancilla\",\n                \"companyName\": null,\n                \"email\": \"joseperez@gmail.com\",\n                \"customerType\": {\n                    \"codigo\": \"1\",\n                    \"description\": \"personal\"\n                },\n                \"typeDocumentIdentity\": {\n                    \"id\": null,\n                    \"description\": \"DNI\"\n                },\n                \"numberDocumentIdentity\": \"70384565\"\n            },\n            \"iterator\": 0,\n            \"accountType\": {\n                \"id\": null,\n                \"description\": \"Ahorro\",\n                \"maintenanceCommission\": null,\n                \"amountMonthlyMovements\": 0,\n                \"active\": false\n            },\n            \"active\": false\n        },\n        \"status\": \"ACTIVO\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Obtener los clientes desde transacciones",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8008/api/v1/transacctions/customers/ye61nn7yf-f630-185e-7r2g-30l5u10il6sc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8008",
+					"path": [
+						"api",
+						"v1",
+						"transacctions",
+						"customers",
+						"ye61nn7yf-f630-185e-7r2g-30l5u10il6sc"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Obtener los clientes desde transacciones",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8008/api/v1/transacctions/customers/ye61nn7yf-f630-185e-7r2g-30l5u10il6sc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8008",
+							"path": [
+								"api",
+								"v1",
+								"transacctions",
+								"customers",
+								"ye61nn7yf-f630-185e-7r2g-30l5u10il6sc"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "content-length",
+							"value": "302"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"ye61nn7yf-f630-185e-7r2g-30l5u10il6sc\",\n    \"firstname\": null,\n    \"lastname\": null,\n    \"companyName\": \"Pinturas Aqua SAC.\",\n    \"email\": \"pinturasaquasac@emeal.com\",\n    \"customerType\": {\n        \"codigo\": \"2\",\n        \"description\": \"EMPRESARIAL\"\n    },\n    \"typeDocumentIdentity\": {\n        \"id\": null,\n        \"description\": \"RUC\"\n    },\n    \"numberDocumentIdentity\": \"10780001252\"\n}"
+				}
+			]
+		}
+	]
+}
